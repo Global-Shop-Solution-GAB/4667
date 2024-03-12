@@ -1,0 +1,1357 @@
+﻿Program.Sub.ScreenSU.Start
+Gui.F_RateEntry..create
+Gui.F_RateEntry..caption("AP/AR Revaluation")
+Gui.F_RateEntry..size(4950,7380)
+Gui.F_RateEntry..minx(0)
+Gui.F_RateEntry..miny(0)
+Gui.F_RateEntry..position(0,0)
+Gui.F_RateEntry..event(UnLoad,f_rateentry_unload)
+Gui.F_RateEntry..fontsize(9)
+Gui.F_RateEntry..forecolor(0)
+Gui.F_RateEntry..BackColor(-2147483633)
+Gui.F_RateEntry..mousepointer(0)
+Gui.F_RateEntry.lbl1.create(label,"Post Date",True,1575,255,1,105,90,True,0,Arial,9,-2147483633,0)
+Gui.F_RateEntry.lbl1.defaultvalue("")
+'Gui.F_RateEntry.lbl1.Event(Click,lbl1_Click)
+Gui.F_RateEntry.dtpPostDate.create(datepicker)
+Gui.F_RateEntry.dtpPostDate.size(1725,285)
+Gui.F_RateEntry.dtpPostDate.position(105,345)
+Gui.F_RateEntry.dtpPostDate.defaultvalue("")
+Gui.F_RateEntry.dtpPostDate.tabstop(True)
+Gui.F_RateEntry.dtpPostDate.tabindex(1)
+Gui.F_RateEntry.dtpPostDate.Event(Change,dtptransdate_change)
+Gui.F_RateEntry.cmdProcess.create(button)
+Gui.F_RateEntry.cmdProcess.caption("Process")
+Gui.F_RateEntry.cmdProcess.size(1980,585)
+Gui.F_RateEntry.cmdProcess.position(2685,90)
+Gui.F_RateEntry.cmdProcess.fontsize(9)
+Gui.F_RateEntry.cmdProcess.event(Click,cmdprocess_click)
+Gui.F_RateEntry.cmdProcess.defaultvalue("")
+Gui.F_RateEntry.cmdProcess.tabstop(True)
+Gui.F_RateEntry.cmdProcess.tabindex(3)
+Gui.F_RateEntry.GsGCRate.Create(GsGridControl)
+Gui.F_RateEntry.GsGCRate.Size(4530,5730)
+Gui.F_RateEntry.GsGCRate.Position(105,795)
+Gui.F_RateEntry.lblProgram.Create(Label,"GAB_4667_AP_AR_REVALUATION.g2u",True,3360,255,0,1305,6615,True,7,"Arial",8,-2147483633,0)
+Gui.F_Summary..create
+Gui.F_Summary..caption("Summary of AP/AR Revaluation")
+Gui.F_Summary..size(17985,10365)
+Gui.F_Summary..minx(0)
+Gui.F_Summary..miny(0)
+Gui.F_Summary..position(0,0)
+Gui.F_Summary..event(UnLoad,f_rateentry_unload)
+Gui.F_Summary..fontsize(9)
+Gui.F_Summary..forecolor(0)
+Gui.F_Summary..BackColor(-2147483633)
+Gui.F_Summary..mousepointer(0)
+Gui.F_Summary.frame1.create(frame)
+Gui.F_Summary.frame1.caption("Summary")
+Gui.F_Summary.frame1.size(12135,2745)
+Gui.F_Summary.frame1.position(165,90)
+Gui.F_Summary.frame1.fontsize(9)
+Gui.F_Summary.GsGCSummary.Create(GsGridControl)
+Gui.F_Summary.GsGCSummary.Size(11880,2340)
+Gui.F_Summary.GsGCSummary.Position(120,255)
+Gui.F_Summary.GsGCSummary.Parent("frame1")
+Gui.F_Summary.cmdUpdate.create(button)
+Gui.F_Summary.cmdUpdate.caption("Create Batch")
+Gui.F_Summary.cmdUpdate.size(3000,480)
+Gui.F_Summary.cmdUpdate.position(14685,750)
+Gui.F_Summary.cmdUpdate.fontsize(9)
+Gui.F_Summary.cmdUpdate.event(Click,cmdupdate_click)
+Gui.F_Summary.cmdUpdate.defaultvalue("")
+Gui.F_Summary.cmdUpdate.tabstop(True)
+Gui.F_Summary.cmdUpdate.tabindex(10)
+Gui.F_Summary.cmdBack.create(button)
+Gui.F_Summary.cmdBack.caption("Back")
+Gui.F_Summary.cmdBack.size(1185,480)
+Gui.F_Summary.cmdBack.position(16500,105)
+Gui.F_Summary.cmdBack.fontsize(9)
+Gui.F_Summary.cmdBack.event(Click,cmdback_click)
+Gui.F_Summary.cmdBack.defaultvalue("")
+Gui.F_Summary.cmdBack.tabstop(True)
+Gui.F_Summary.cmdBack.tabindex(11)
+Gui.F_Summary.txtGLAcct.create(textbox,"",True,2445,315,0,14700,1830,True,0,Arial,9,-2147483643,1)
+Gui.F_Summary.txtGLAcct.defaultvalue("")
+Gui.F_Summary.txtGLAcct.tabstop(True)
+Gui.F_Summary.txtGLAcct.tabindex(12)
+Gui.F_Summary.txtGLAcct.Locked(True)
+Gui.F_Summary.lbl5.create(label,"Unrealized Gain/Loss GL Account",True,2550,465,1,14700,1410,True,0,Arial,9,-2147483633,0)
+Gui.F_Summary.lbl5.defaultvalue("")
+Gui.F_Summary.cmdBrowse.create(button)
+Gui.F_Summary.cmdBrowse.caption("^")
+Gui.F_Summary.cmdBrowse.size(405,405)
+Gui.F_Summary.cmdBrowse.position(17265,1755)
+Gui.F_Summary.cmdBrowse.fontsize(9)
+Gui.F_Summary.cmdBrowse.event(Click,cmdbrowse_click)
+Gui.F_Summary.cmdBrowse.defaultvalue("")
+Gui.F_Summary.cmdBrowse.tabstop(True)
+Gui.F_Summary.cmdBrowse.tabindex(14)
+Gui.F_Summary.txtRefNum.create(textbox,"",True,2910,315,0,14700,2490,True,0,Arial,9,-2147483643,1)
+Gui.F_Summary.txtRefNum.maxLength(15)
+Gui.F_Summary.txtRefNum.defaultvalue("")
+Gui.F_Summary.txtRefNum.tabstop(True)
+Gui.F_Summary.txtRefNum.tabindex(17)
+Gui.F_Summary.lbl7.create(label,"Reference Number",True,1935,255,1,14670,2265,True,0,Arial,9,-2147483633,0)
+Gui.F_Summary.lbl7.defaultvalue("")
+Gui.F_Summary.cmdExport.create(button)
+Gui.F_Summary.cmdExport.caption("Export to Excel")
+Gui.F_Summary.cmdExport.size(1680,480)
+Gui.F_Summary.cmdExport.position(14715,105)
+Gui.F_Summary.cmdExport.fontsize(9)
+Gui.F_Summary.cmdExport.event(Click,cmdexport_click)
+Gui.F_Summary.cmdExport.defaultvalue("")
+Gui.F_Summary.tab1.Create(Tab)
+Gui.F_Summary.tab1.Size(17535,6555)
+Gui.F_Summary.tab1.Position(165,2955)
+Gui.F_Summary.tab1.FontSize(9)
+Gui.F_Summary.tab1.Tabs(2)
+Gui.F_Summary.tab1.SetTab(0)
+Gui.F_Summary.tab1.Caption("Accounts Receivable")
+Gui.F_Summary.tab1.SetTab(1)
+Gui.F_Summary.tab1.Caption("Accounts Payable")
+Gui.F_Summary.GsGCAR.Create(GsGridControl)
+Gui.F_Summary.GsGCAR.Size(17310,6090)
+Gui.F_Summary.GsGCAR.Position(60,60)
+Gui.F_Summary.GsGCAR.Parent("tab1",0)
+Gui.F_Summary.GsGCAP.Create(GsGridControl)
+Gui.F_Summary.GsGCAP.Size(17310,6090)
+Gui.F_Summary.GsGCAP.Position(60,60)
+Gui.F_Summary.GsGCAP.Parent("tab1",1)
+Gui.F_Summary.frame2.Create(Frame)
+Gui.F_Summary.frame2.Size(2130,2745)
+Gui.F_Summary.frame2.Position(12405,90)
+Gui.F_Summary.frame2.Caption("Total Gain/ Loss")
+Gui.F_Summary.frame2.FontSize(9)
+Gui.F_Summary.lbl1.Create(Label,"Accounts Receivable",True,1935,255,0,90,570,True,0,"Arial",9,-2147483633,0)
+Gui.F_Summary.lbl1.Parent("frame2")
+Gui.F_Summary.txtTotalAR.Create(TextBox,"",True,1920,315,0,105,795,True,1,"Arial",9,-2147483643,1)
+Gui.F_Summary.txtTotalAR.Parent("frame2")
+Gui.F_Summary.txtTotalAR.NumericOnly(True)
+Gui.F_Summary.txtTotalAR.Locked(True)
+Gui.F_Summary.lbl2.Create(Label,"Accounts Payable",True,1680,255,0,300,1545,True,0,"Arial",9,-2147483633,0)
+Gui.F_Summary.lbl2.Parent("frame2")
+Gui.F_Summary.txtTotalAP.Create(TextBox,"",True,1920,315,0,105,1770,True,1,"Arial",9,-2147483643,1)
+Gui.F_Summary.txtTotalAP.Parent("frame2")
+Gui.F_Summary.txtTotalAP.NumericOnly(True)
+Gui.F_Summary.txtTotalAP.Locked(True)
+Gui.F_Summary.lblProgram.Create(Label,"GAB_4667_AP_AR_REVALUATION.g2u",True,5145,255,0,12525,9600,True,1,"Arial",8,-2147483633,0)
+Program.Sub.ScreenSU.End
+
+Program.Sub.Preflight.Start
+Variable.Global.sCoCurr.Declare(String)
+Variable.Global.fAPTotal.Declare(Float,0)
+Variable.Global.fARTotal.Declare(Float,0)
+Variable.Global.dPostDate.Declare(Date,1900-01-01)
+Variable.Global.dTransDate.Declare(Date,1900-01-01)
+Program.Sub.Preflight.End
+
+Program.Sub.Main.Start
+F.Intrinsic.Control.SetErrorHandler("Main_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.i1.Declare
+V.Local.sIconPath.Declare
+V.Local.sQuery.Declare(String)
+
+F.ODBC.Connection!conx.OpenConnection(V.Ambient.PDSN,V.Ambient.PUser,V.Ambient.PPass)
+
+F.Intrinsic.String.Concat(V.Caller.GlobalDir,"\ART\gss2.ico",V.Local.sIconPath)
+Gui.F_RateEntry..Icon(V.Local.sIconPath)
+Gui.F_Summary..Icon(V.Local.sIconPath)
+
+'Get base currency from V_COMPANY_OPT
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","SELECT CURRENCY FROM V_COMPANY_OPT")
+V.Global.sCoCurr.Set(V.ODBC.conx!rst.FieldValTrim!CURRENCY)
+F.ODBC.conx!rst.Close
+
+'Get foreign currencies
+F.Intrinsic.String.Concat("SELECT ISO_CODE as Currency FROM COMPANY_CURRENCY WHERE ISO_CODE <> '",V.Global.sCoCurr.Trim,"' ORDER BY ISO_CODE",V.Local.sQuery)
+F.Data.DataTable.CreateFromSQL("dtISO","Conx",V.Local.sQuery)
+F.Intrinsic.Control.If(V.DataTable.dtISO.RowCount,=,0)
+	F.Intrinsic.UI.Msgbox("No foreign currency is found","NOTIFICATION")
+	F.Intrinsic.Control.CallSub(F_rateentry_unload)
+F.Intrinsic.Control.Else
+	F.Data.DataTable.CreateFromSQL("dtForex","conx",V.Local.sQuery,True)
+	F.Data.DataTable.AddColumn("dtForex","RateTo","Float")
+	F.Data.DataTable.AddColumn("dtForex","RateFrom","Float")
+	F.Data.DataTable.AddColumn("dtForex","AR","Float")
+	F.Data.DataTable.AddColumn("dtForex","AP","Float")
+
+	F.Data.DataTable.CreateFromSQL("dtForexDetail","conx",V.Local.sQuery,True)
+	F.Data.DataTable.AddColumn("dtForexDetail","ARTotal","Float")
+	F.Data.DataTable.AddColumn("dtForexDetail","ARTotalExch","Float")
+	F.Data.DataTable.AddColumn("dtForexDetail","APTotal","Float")
+	F.Data.DataTable.AddColumn("dtForexDetail","APTotalExch","Float")
+F.Intrinsic.Control.EndIf
+F.Data.DataTable.Close("dtISO")
+
+Gui.F_RateEntry.dtpPostDate.Value(V.Ambient.Date)
+F.Intrinsic.Control.CallSub(Dtptransdate_change)
+
+F.Intrinsic.Control.CallSub(Gsfgexchrate_style)
+
+Gui.F_Summary.tab1.Anchor(15)
+Gui.F_Summary.GsGCAP.Anchor(15)
+Gui.F_Summary.GsGCAR.Anchor(15)
+Gui.F_RateEntry.lblProgram.Anchor(11)
+Gui.F_Summary.lblProgram.Anchor(11)
+Gui.F_RateEntry.lblProgram.Alignment(6)
+Gui.F_Summary.lblProgram.Alignment(6)
+
+Gui.F_RateEntry..Show
+
+F.Intrinsic.Control.ExitSub
+
+F.Intrinsic.Control.Label("Main_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.Main.End
+
+Program.Sub.f_rateentry_unload.Start
+F.Intrinsic.Control.SetErrorHandler("f_rateentry_unload_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+F.Data.DataTable.Close("dtForex")
+
+F.Intrinsic.Control.If(V.DataTable.dtARGL.Exists,=,True)
+	F.Data.DataTable.Close("dtARGL")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtAP.Exists,=,True)
+	F.Data.DataTable.Close("dtAP")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.DataTable.dtAR.Exists,=,True)
+	F.Data.DataTable.Close("dtAR")
+F.Intrinsic.Control.EndIf
+
+F.ODBC.Connection!conx.Close
+F.Intrinsic.Control.End
+
+F.Intrinsic.Control.Label("f_rateentry_unload_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.f_rateentry_unload.End
+
+Program.Sub.gsfgExchRate_style.Start
+F.Intrinsic.Control.SetErrorHandler("gsfgExchRate_style_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sColumn.Declare
+
+Gui.F_RateEntry.GsGCRate.AddGridviewFromDatatable("gvForex","dtForex")
+Gui.F_RateEntry.GsGCRate.MainView("gvForex")
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","AP","Visible",False)
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","AR","Visible",False)
+F.Intrinsic.String.Concat("Rate To ",V.Global.sCoCurr.Trim,V.Local.sColumn)
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","RateTo","Caption",V.Local.sColumn)
+F.Intrinsic.String.Concat("Rate From ",V.Global.sCoCurr.Trim,V.Local.sColumn)
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","RateFrom","Caption",V.Local.sColumn)
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","Currency","HeaderHAlignment","Center")
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","RateTo","HeaderHAlignment","Center")
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","RateFrom","HeaderHAlignment","Center")
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","Currency","CellHAlignment","Center")
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","RateTo","DisplayCustomNumeric","#,###,##0.00000")
+Gui.F_RateEntry.GsGCRate.SetColumnProperty("gvForex","RateFrom","DisplayCustomNumeric","#,###,##0.00000")
+
+F.Intrinsic.Control.Label("gsfgExchRate_style_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.gsfgExchRate_style.End
+
+Program.Sub.cmdprocess_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdprocess_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.fExchRate1.Declare(Float)
+V.Local.fExchRate2.Declare(Float)
+
+V.Local.i1.Declare(Long)
+V.Local.iKey.Declare(Long)
+
+V.Local.sColumn.Declare
+V.Local.sExchRate.Declare(String)
+V.Local.sMessage.Declare(String)
+
+'Round exchange rate value to 5 decimal points
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex.RowCount--,1)
+	F.Intrinsic.Math.Round(V.DataTable.dtForex(V.Local.i1).RateTo!FieldValFloat,5,V.Local.fExchRate1)
+	F.Intrinsic.Math.Round(V.DataTable.dtForex(V.Local.i1).RateFrom!FieldValFloat,5,V.Local.fExchRate2)
+	F.Data.DataTable.SetValue("dtForex",V.Local.i1,"RateTo",V.Local.fExchRate1,"RateFrom",V.Local.fExchRate2)
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'Get post date and proceed with calculating gain/loss
+V.Global.dPostDate.Set(V.Screen.F_RateEntry!dtpPostDate.Value)
+F.Intrinsic.Control.CallSub(Calculategainloss)
+
+'Setup dataview and gridview
+F.Data.DataView.Create("dtForex","dvForex")
+F.Data.DataTable.Clone("dtForexDetail","dtForex$dtDetail",True)
+F.Data.DataTable.Merge("dtForexDetail","dtForex$dtDetail",False,1)
+F.Data.DataTable.AddRelation("dtForex","Currency","dtForex$dtDetail","Currency")
+F.Data.DataView.Create("dtForex$dtDetail","dvDetail")
+Gui.F_Summary.GsGCSummary.AddGridviewFromDataview("gvForex","dtForex","dvForex")
+Gui.F_Summary.GsGCSummary.AddGridviewFromDataview("gvDetail","dtForex","dvDetail")
+Gui.F_Summary.GsGCSummary.MainView("gvForex")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AP","Caption","AP Gain/ (Loss)")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AR","Caption","AR Gain/ (Loss)")
+F.Intrinsic.String.Concat("Rate To ",V.Global.sCoCurr.Trim,V.Local.sColumn)
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateTo","Caption",V.Local.sColumn)
+F.Intrinsic.String.Concat("Rate From ",V.Global.sCoCurr.Trim,V.Local.sColumn)
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateFrom","Caption",V.Local.sColumn)
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","Currency","MinWidth","60")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateTo","MinWidth","80")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateFrom","MinWidth","80")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AP","MinWidth","110")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AR","MinWidth","110")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","Currency","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateTo","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateFrom","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AP","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AR","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","Currency","CellHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateTo","DisplayCustomNumeric","#,###,##0.00000")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","RateFrom","DisplayCustomNumeric","#,###,##0.00000")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AP","DisplayCustomNumeric","#,###,##0.00")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvForex","AR","DisplayCustomNumeric","#,###,##0.00")
+
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotal","Caption","Total AP")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotalExch","Caption","Total AP in Forex")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotal","Caption","Total AR")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotalExch","Caption","Total AR in Forex")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","Currency","Visible",False)
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotal","MinWidth","110")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotalExch","MinWidth","110")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotal","MinWidth","110")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotalExch","MinWidth","110")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotal","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotalExch","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotal","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotalExch","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotal","DisplayCustomNumeric","#,###,##0.00")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","APTotalExch","DisplayCustomNumeric","#,###,##0.00")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotal","DisplayCustomNumeric","#,###,##0.00")
+Gui.F_Summary.GsGCSummary.SetColumnProperty("gvDetail","ARTotalExch","DisplayCustomNumeric","#,###,##0.00")
+
+'Set background color of gvForex
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex.RowCount--,2)
+	Gui.F_Summary.GsGCSummary.SetRowAppearance("gvForex",V.Local.i1,"backcolor","aliceblue")
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'Set background color of gvDetail
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex$dtDetail.RowCount--,1)
+	Gui.F_Summary.GsGCSummary.SetRowAppearance("gvDetail",V.Local.i1,"backcolor",V.Color.LtGray)
+F.Intrinsic.Control.Next(V.Local.i1)
+
+F.Intrinsic.String.Format(V.Global.fAPTotal,"#,0.00",V.Local.sExchRate)
+Gui.F_Summary.txtTotalAP.Text(V.Local.sExchRate)
+F.Intrinsic.string.Format(V.Global.fARTotal,"#,0.00",V.Local.sExchRate)
+Gui.F_Summary.txtTotalAR.Text(V.Local.sExchRate)
+
+Gui.F_Summary.tab1.SetTab(0)
+Gui.F_RateEntry..Visible(False)
+Gui.F_Summary..Show
+
+F.Intrinsic.Control.Label("cmdprocess_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdprocess_click.End
+
+Program.Sub.CalculateGainLoss.Start
+F.Intrinsic.Control.SetErrorHandler("CalculateGainLoss_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.fExchAmt.Declare(Float)
+V.Local.fExchAmtBatch.Declare(Float)
+V.Local.fExchGainLoss.Declare(Float)
+V.Local.fRateDiff.Declare(Float)
+V.Local.fTotalCurrency.Declare(Float)
+V.Local.fTotalExchInvoice.Declare(Float)
+V.Local.fTotalGL.Declare(Float)
+V.Local.fTotalInvoice.Declare(Float)
+
+V.Local.i1.Declare(Long)
+V.Local.i2.Declare(Long)
+V.Local.i3.Declare(Long)
+V.Local.i4.Declare(Long)
+V.Local.iBatchCode.Declare(Long)
+V.Local.iStartRow.Declare(Long)
+
+V.Local.sCI.Declare(String)
+V.Local.sExchGainLoss.Declare(String)
+V.Local.sFilter.Declare
+V.Local.sLabel.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sSeek.Declare(String)
+V.Local.sTransDate.Declare(String)
+V.Local.sVI.Declare(String)
+V.Local.sWaitMsg.Declare(String)
+
+Gui.F_RateEntry..Enabled(False)
+
+'Calculating gain/loss for AP and AR
+F.Intrinsic.UI.InvokeWaitDialog("Starting revaluation calculation","Revaluation of AP & AR")
+F.Intrinsic.UI.SetWaitDialogParentHwnd(1)
+F.Intrinsic.Control.CallSub(Gainlossap)
+F.Intrinsic.Control.CallSub(Gainlossar)
+F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.If(V.DataTable.dtARGL.Exists,=,True)
+	F.Data.DataTable.Close("dtARGL")
+F.Intrinsic.Control.EndIf
+
+'Get AR GL accounts in case of multiple AR accounts and store them into a datatable
+F.Data.DataTable.CreateFromSQL("dtARGL","Conx","SELECT GL_ACCOUNT as GL FROM AR_EXCL_ACCOUNT WHERE SYS = 'AR' AND SUB_SYS = 'RCV' ORDER BY ACCOUNT_CODE",True)
+F.Data.DataTable.AddColumn("dtARGL","Amount","Float")
+
+'Calculating gain/loss amount for different AR accounts 
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtARGL.RowCount--,1)
+	F.Intrinsic.String.Build("GL = '{0}'",V.DataTable.dtARGL(V.Local.i1).GL!FieldValTrim,V.Local.sFilter)
+	F.Data.DataTable.Compute("dtAR","SUM(GainLoss)",V.Local.sFilter,V.Local.fTotalGL)
+	F.Data.DataTable.SetValue("dtARGL",V.Local.i1,"Amount",V.Local.fTotalGL)
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'Get exchange variance GL account
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","select GL_ACCOUNT from AR_EXCL_ACCOUNT where sys = 'AR' and sub_sys = 'XVR'")
+Gui.F_Summary.txtGLAcct.Text(V.ODBC.conx!rst.FieldValTrim!GL_ACCOUNT)
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.Control.Label("CalculateGainLoss_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.CalculateGainLoss.End
+
+Program.Sub.cmdback_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdback_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+Gui.F_RateEntry..Enabled(True)
+Gui.F_Summary..Visible(False)
+Gui.F_RateEntry..Visible(True)
+
+F.Intrinsic.Control.Label("cmdback_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdback_click.End
+
+Program.Sub.cmdbrowse_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdbrowse_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.iWidths.Declare(Long)
+
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTitles.Declare(String)
+
+F.Intrinsic.String.Split("GL Account*!*GL Description","*!*",V.Local.sTitles)
+F.Intrinsic.String.Split("1600*!*4000","*!*",V.Local.iWidths)
+
+V.Local.sQuery.Set("SELECT GL_ACCOUNT, DESCR FROM V_GL_MASTER WHERE INACTIVE_DATE = '1900-01-01' ORDER BY GL_ACCOUNT")
+
+'Open GL account browser
+F.Intrinsic.UI.SetBrowserHotTypeAhead(True)
+F.Intrinsic.UI.Browser("Select a GL Account","conx",V.Local.sQuery,V.Local.sTitles,V.Local.iWidths,V.Local.sRet)
+
+F.Intrinsic.Control.If(V.Local.sRet,<>,"***CANCEL***")
+	F.Intrinsic.String.Split(V.Local.sRet,"*!*",V.Local.sRet)
+	Gui.F_Summary.txtGLAcct.Text(V.Local.sRet(0).Trim)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("cmdbrowse_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdbrowse_click.End
+
+Program.Sub.dlstmode_click.Start
+F.Intrinsic.Control.SetErrorHandler("dlstmode_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.sExchCurr.Declare(String)
+V.Local.sExchGainLoss.Declare(String)
+V.Local.sMode.Declare(String)
+
+V.Local.sExchCurr.Set(V.Screen.F_Summary!dlstCurr.Text)
+V.Local.sMode.Set(V.Screen.F_Summary!dlstMode.Text)
+
+F.Intrinsic.Control.CallSub(Gsfgap_style)
+
+F.Intrinsic.Control.If(V.Local.sMode.Trim,=,"AP")
+	Gui.F_Summary.frame1.Caption("Total AP Revaluation")
+	F.Intrinsic.String.Format(V.Global.fAPTotal,"#,0.00",V.Local.sExchGainLoss)
+	Gui.F_Summary.txtGrandTotal.Text(V.Local.sExchGainLoss)
+F.Intrinsic.Control.ElseIf(V.Local.sMode.Trim,=,"AR")
+	Gui.F_Summary.frame1.Caption("Total AR Revaluation")
+	F.Intrinsic.String.Format(V.Global.fARTotal,"#,0.00",V.Local.sExchGainLoss)
+	Gui.F_Summary.txtGrandTotal.Text(V.Local.sExchGainLoss)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.If(V.Local.sExchCurr.Trim,<>,"")
+	F.Intrinsic.Control.CallSub(Dlstcurr_click)
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("dlstmode_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.dlstmode_click.End
+
+Program.Sub.cmdupdate_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdupdate_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.fAPTotal.Declare
+V.Local.fARTotal.Declare
+V.Local.fCreditAmt.Declare(Float)
+V.Local.fDebitAmt.Declare
+
+V.Local.i1.Declare(Long)
+
+V.Local.sAPGL.Declare(String)
+V.Local.sARGL.Declare
+V.Local.sBatch.Declare(String)
+V.Local.sDesc.Declare(String)
+V.Local.sExchGL.Declare(String)
+V.Local.sField.Declare(String)
+V.Local.sFile.Declare(String)
+V.Local.sFileName.Declare(String)
+V.Local.sMessage.Declare(String)
+V.Local.sMonth.Declare(String)
+V.Local.sParam.Declare(String)
+V.Local.sPostDate.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRefNum.Declare(String)
+V.Local.sRevalDate.Declare(String)
+V.Local.sTransDate.Declare(String)
+V.Local.sUser.Declare(String)
+V.Local.sYear.Declare(String)
+
+F.Intrinsic.String.Format(V.Global.dPostDate,"DD/MM/YYYY",V.Local.sPostDate)
+V.Local.sRefNum.Set(V.Screen.F_Summary!txtRefNum.Text)
+V.Local.sExchGL.Set(V.Screen.F_Summary!txtGLAcct.Text)
+
+'Batch creation for AP revaluation
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","SELECT ACCT_PRE FROM ACCTS_PAY_ACCT WHERE SYS = 'AP' AND SUB_SYS = 'PAY'")
+V.Local.sAPGL.Set(V.ODBC.conx!rst.FieldValTrim!ACCT_PRE)
+F.ODBC.conx!rst.Close
+
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst","SELECT GL_ACCOUNT as GL FROM AR_EXCL_ACCOUNT WHERE SYS = 'AR' AND SUB_SYS = 'RCV' ORDER BY ACCOUNT_CODE")
+V.Local.sARGL.Set(V.ODBC.conx!rst.FieldValTrim!GL)
+F.ODBC.conx!rst.Close
+
+'Entering AP line information
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex.RowCount--,1)
+	F.Intrinsic.Control.If(V.DataTable.dtForex(V.Local.i1).AP!FieldValFloat,<>,0)
+	F.Intrinsic.Control.If(V.Local.sFile.Trim,=,"")
+		F.Intrinsic.String.RPad(V.Local.sAPGL," ",15,V.Local.sFile)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.RPad(V.Local.sAPGL," ",15,V.Local.sField)
+		F.Intrinsic.String.Concat(V.Local.sFile,V.Local.sField,V.Local.sFile)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Math.Mult(1,V.DataTable.dtForex(V.Local.i1).AP!FieldValFloat,V.Local.fAPTotal)
+	F.Intrinsic.String.LPad(V.Local.fAPTotal," ",12,V.Local.sField)
+'	F.Intrinsic.Math.Mult(-1,V.Global.fAPTotal,V.Global.fAPTotal)
+'	F.Intrinsic.String.LPad(V.Global.fAPTotal," ",12,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+
+	F.Intrinsic.String.Concat("AP Revaluation ",V.Local.sPostDate," ",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,V.Local.sDesc)
+	F.Intrinsic.String.RPad(V.Local.sDesc," ",30,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+
+	F.Intrinsic.String.Format(V.Ambient.Date,"MM",V.Local.sMonth)
+	F.Intrinsic.String.Format(V.Ambient.Date,"YY",V.Local.sYear)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sYear.Trim,",",V.Local.sMonth.Trim,V.Local.sFile)
+
+	F.Intrinsic.String.Format(V.Global.dPostDate,"MM/YY",V.Local.sRevalDate)
+	F.Intrinsic.Control.If(V.Local.sRefNum.Trim,=,"")
+		F.Intrinsic.String.Concat("AP/AR VAL ",V.Local.sRevalDate,V.Local.sRefNum)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.RPad(V.Local.sRefNum.Trim," ",15,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",AP   ,",V.Local.sField,V.Ambient.NewLine,V.Local.sFile)
+
+	'Entering unrealized exchange gain/loss line information
+	F.Intrinsic.String.RPad(V.Local.sExchGL," ",15,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,V.Local.sField,V.Local.sFile)
+
+	F.Intrinsic.Math.Mult(-1,V.Local.fAPTotal,V.Local.fCreditAmt)
+	F.Intrinsic.String.LPad(V.Local.fCreditAmt," ",12,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+	F.Intrinsic.String.RPad(V.Local.sDesc," ",30,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sYear.Trim,",",V.Local.sMonth.Trim,V.Local.sFile)
+	F.Intrinsic.String.RPad(V.Local.sRefNum.Trim," ",15,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",AP     ,",V.Local.sField,V.Ambient.NewLine,V.Local.sFile)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'Entering debit line information for AR
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex.RowCount--,1)
+	F.Intrinsic.Control.If(V.DataTable.dtForex(V.Local.i1).AR!FieldValFloat,<>,0)
+	F.Intrinsic.Control.If(V.Local.sFile.Trim,=,"")
+		F.Intrinsic.String.RPad(V.Local.sARGL," ",15,V.Local.sFile)
+	F.Intrinsic.Control.Else
+		F.Intrinsic.String.RPad(V.Local.sARGL," ",15,V.Local.sField)
+		F.Intrinsic.String.Concat(V.Local.sFile,V.Local.sField,V.Local.sFile)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.Math.Mult(1,V.DataTable.dtForex(V.Local.i1).AR!FieldValFloat,V.Local.fARTotal)
+	F.Intrinsic.String.LPad(V.Local.fARTotal," ",12,V.Local.sField)
+'	F.Intrinsic.Math.Mult(-1,V.Global.fAPTotal,V.Global.fAPTotal)
+'	F.Intrinsic.String.LPad(V.Global.fAPTotal," ",12,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+
+	F.Intrinsic.String.Concat("AR Revaluation ",V.Local.sPostDate," ",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,V.Local.sDesc)
+	F.Intrinsic.String.RPad(V.Local.sDesc," ",30,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+
+	F.Intrinsic.String.Format(V.Ambient.Date,"MM",V.Local.sMonth)
+	F.Intrinsic.String.Format(V.Ambient.Date,"YY",V.Local.sYear)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sYear.Trim,",",V.Local.sMonth.Trim,V.Local.sFile)
+
+	F.Intrinsic.String.Format(V.Global.dPostDate,"MM/YY",V.Local.sRevalDate)
+	F.Intrinsic.Control.If(V.Local.sRefNum.Trim,=,"")
+		F.Intrinsic.String.Concat("AP/AR VAL ",V.Local.sRevalDate,V.Local.sRefNum)
+	F.Intrinsic.Control.EndIf
+	F.Intrinsic.String.RPad(V.Local.sRefNum.Trim," ",15,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",AR   ,",V.Local.sField,V.Ambient.NewLine,V.Local.sFile)
+
+'Debit lines to several AR GL accounts
+'F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtARGL.RowCount--,1)
+'	F.Intrinsic.String.RPad(V.DataTable.dtARGL(V.Local.i1).GL!FieldValTrim," ",15,V.Local.sField)
+'	F.Intrinsic.String.Concat(V.Local.sFile,V.Local.sField,V.Local.sFile)
+'	F.Intrinsic.String.LPad(V.DataTable.dtARGL(V.Local.i1).Amount!FieldValFloat," ",12,V.Local.sField)
+'	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+'	F.Intrinsic.String.RPad(V.Local.sDesc," ",30,V.Local.sField)
+'	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+'	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sYear.Trim,",",V.Local.sMonth.Trim,V.Local.sFile)
+'	F.Intrinsic.String.RPad(V.Local.sRefNum.Trim," ",15,V.Local.sField)
+'	F.Intrinsic.String.Concat(V.Local.sFile,",AR     ,",V.Local.sField,V.Ambient.NewLine,V.Local.sFile)
+'F.Intrinsic.Control.Next(V.Local.i1)
+
+'Entering unrealized exchange gain/loss line information
+	F.Intrinsic.String.RPad(V.Local.sExchGL," ",15,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,V.Local.sField,V.Local.sFile)
+	
+	F.Intrinsic.Math.Mult(-1,V.Local.fARTotal,V.Local.fDebitAmt)
+	F.Intrinsic.String.LPad(V.Local.fDebitAmt," ",12,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+	F.Intrinsic.String.RPad(V.Local.sDesc," ",30,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sField,V.Local.sFile)
+	F.Intrinsic.String.Concat(V.Local.sFile,",",V.Local.sYear.Trim,",",V.Local.sMonth.Trim,V.Local.sFile)
+	F.Intrinsic.String.RPad(V.Local.sRefNum.Trim," ",15,V.Local.sField)
+	F.Intrinsic.String.Concat(V.Local.sFile,",AR     ,",V.Local.sField,V.Ambient.NewLine,V.Local.sFile)
+	F.Intrinsic.Control.EndIf
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'Save the file to GLtttccc located in FILES folder
+F.Intrinsic.String.Concat(V.Caller.FilesDir,"\GL",V.Caller.Terminal,V.Caller.CompanyCode,"1234",V.Local.sFileName)
+F.Intrinsic.File.String2File(V.Local.sFileName,V.Local.sFile)
+
+'Preparing the program parameter and run XGL004
+F.Intrinsic.String.RPad(V.Caller.User," ",8,V.Local.sUser)
+F.Intrinsic.String.Concat("GL",V.Caller.Terminal,V.Caller.CompanyCode,"1234",V.Local.sParam)
+F.Intrinsic.String.RPad(V.Local.sParam," ",12,V.Local.sParam)
+F.Intrinsic.String.Concat(V.Ambient.QuadQuote,V.Caller.CompanyCode,V.Local.sParam,V.Local.sUser.UCase,V.Ambient.QuadQuote,V.Local.sParam)
+F.Intrinsic.Task.LaunchGSSSync("XGL004","-C",V.Local.sParam)
+
+F.Intrinsic.String.Concat("SELECT TOP 1 BATCH FROM GL_JRNL_ENTRY WHERE USERID = '",V.Local.sUser.Trim,"' AND REFERENCE = '",V.Local.sRefNum.PSQLFriendly,"' AND DESCR = '",V.Local.sDesc.PSQLFriendly,"'",V.Local.sQuery)
+'F.Intrinsic.String.Concat("SELECT BATCH FROM GL_JRNL_ENTRY WHERE REFERENCE = '",V.Local.sRefNum.PSQLFriendly,"' AND DESCR = '",V.Local.sDesc.PSQLFriendly,"'",V.Local.sQuery)
+F.Intrinsic.String.Concat(V.Local.sQuery," AND LAST_CHG_PGM = 'XGL004'","ORDER BY BATCH DESC",V.Local.sQuery)
+F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+V.Local.sBatch.Set(V.ODBC.conx!rst.FieldValTrim!BATCH)
+F.ODBC.conx!rst.Close
+
+F.Intrinsic.String.Format(V.Global.dPostDate,"YYYYMMDD",V.Local.sPostDate)
+'F.Intrinsic.String.Format(V.Global.dTransDate,"YYYYMMDD",V.Local.sTransDate)
+
+'Updating post date and transaction date of the batch
+F.Intrinsic.String.Concat("UPDATE GL_JRNL_ENTRY SET P_DATE = '",V.Local.sPostDate.Trim,"' WHERE BATCH = '",V.Local.sBatch.Trim,"'",V.Local.sQuery)
+F.ODBC.Connection!conx.Execute(V.Local.sQuery)
+
+F.Intrinsic.String.Concat("Batch No. ",V.Local.sBatch.Trim," has been created and is ready for posting",V.Local.sMessage)
+F.Intrinsic.UI.Msgbox(V.Local.sMessage,"Revaluation of AP & AR")
+
+F.Intrinsic.Control.CallSub(F_rateentry_unload)
+
+F.Intrinsic.Control.Label("cmdupdate_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdupdate_click.End
+
+Program.Sub.dtptransdate_change.Start
+F.Intrinsic.Control.SetErrorHandler("dtptransdate_change_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.i1.Declare(Long)
+
+V.Local.sExchDate.Declare(String)
+V.Local.sQuery.Declare(String)
+
+F.Intrinsic.UI.InvokeWaitDialog("Retrieving exchange rate","Revaluation of AP & AR")
+
+F.Intrinsic.String.Format(V.Screen.F_RateEntry!dtpPostDate.Value,"YYYY-MM-DD",V.Local.sExchDate)
+'Get the exchange rate for every currency in V.uGlobal.uCurrency
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex.RowCount--,1)
+	'Select the latest 3 exchange rates
+'	F.Intrinsic.String.Concat("SELECT TOP 3 DATE_EXCH_RATE, EXCHANGE_RATE FROM V_EXCHANGE_RATES WHERE FROM_ISO_CODE = '",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,"' AND TO_ISO_CODE = '",V.Global.sCoCurr.Trim,"' AND DATE_EXCH_RATE < '",V.Local.sExchDate.Trim,"' ORDER BY DATE_EXCH_RATE DESC",V.Local.sQuery)
+	F.Intrinsic.String.Concat("SELECT TOP 3 DATE_EXCH_RATE, EXCHANGE_RATE FROM V_EXCHANGE_RATES WHERE TO_ISO_CODE = '",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,"' AND FROM_ISO_CODE = '",V.Global.sCoCurr.Trim,"' AND DATE_EXCH_RATE <= '",V.Local.sExchDate.Trim,"' ORDER BY DATE_EXCH_RATE DESC",V.Local.sQuery)
+	F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+	F.Intrinsic.Control.Do
+		'If no exchange rate info is found, set the rate to 1
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.EOF,=,True)
+			F.Data.DataTable.SetValue("dtForex",V.Local.i1,"RateTo",1,"RateFrom",1)
+			F.Intrinsic.Control.ExitDo
+		F.Intrinsic.Control.EndIf
+		'If the exchange rate info is found, store it and exit the loop
+		F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldValFloat!EXCHANGE_RATE,<>,0)
+			F.Intrinsic.String.Build("select exchange_rate from v_exchange_rates where to_iso_code = '{0}' and from_iso_code = '{1}' and date_exch_rate = '{2}'",V.Global.sCoCurr.Trim,V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,V.ODBC.conx!rst.FieldValPervasiveDate!DATE_EXCH_RATE,V.Local.sQuery)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rstForex",V.Local.sQuery)
+			F.Data.DataTable.SetValue("dtForex",V.Local.i1,"RateTo",V.ODBC.conx!rstForex.FieldValFloat!exchange_rate,"RateFrom",V.ODBC.conx!rst.FieldValFloat!EXCHANGE_RATE)
+			F.ODBC.conx!rstForex.Close
+			F.Intrinsic.Control.ExitDo
+		F.Intrinsic.Control.EndIf
+		F.ODBC.conx!rst.MoveNext
+	F.Intrinsic.Control.Loop
+	F.ODBC.conx!rst.Close
+F.Intrinsic.Control.Next(V.Local.i1)
+
+F.Intrinsic.UI.CloseWaitDialog
+
+F.Intrinsic.Control.Label("dtptransdate_change_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.dtptransdate_change.End
+
+Program.Sub.cmdexport_click.Start
+F.Intrinsic.Control.SetErrorHandler("cmdexport_click_Err")
+F.Intrinsic.Control.ClearErrors
+
+V.Local.sError.Declare(String)
+
+V.Local.i1.Declare(Long)
+V.Local.i2.Declare(Long)
+V.Local.iIndex.Declare
+
+V.Local.sCurr.Declare(String)
+V.Local.sExportFile.Declare(String)
+V.Local.sExportSheet.Declare(String)
+V.Local.sField.Declare
+V.Local.sFileName.Declare(String)
+V.Local.sFilePath.Declare(String)
+V.Local.sRename.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sTransDate.Declare(String)
+V.Local.sWorkbook.Declare(String)
+V.Local.sWorkSheet.Declare(String)
+
+'Display the Save Dialog
+F.Intrinsic.UI.ShowSaveFileDialog("","*.csv|",,V.Local.sFilePath)
+
+'If User did not hit the Cancel button on the Save File Dialog, then Attempt to Export/Save the File
+F.Intrinsic.Control.If(V.Local.sFilePath,<>,"***CANCEL***")
+	F.Intrinsic.UI.InvokeWaitDialog("Exporting AP/AR revaluation into CSV","Revaluation of AP & AR")
+
+	F.Intrinsic.String.Concat(V.Local.sFilePath,"_AR.csv",V.Local.sFileName)
+	F.Data.DataTable.SaveToCSV("dtAR",V.Local.sFileName,True)
+	F.Intrinsic.String.Concat(V.Local.sFilePath,"_AP.csv",V.Local.sFileName)
+	F.Data.DataTable.SaveToCSV("dtAP",V.Local.sFileName,True)
+'	V.Local.sCurr.Set(V.Screen.F_Summary!dlstCurr.Text)
+'	F.Intrinsic.String.Concat(V.Local.sFilePath,"-",V.Local.sCurr,".xlsx",V.Local.sFileName)
+'	F.Automation.MSExcel.CreateAppObject("AP")
+'	F.Automation.MSExcel.CreateWorkbook("AP","GuideTree",V.Local.sFileName)
+'	F.Intrinsic.String.Concat("AP-",V.Local.sCurr.Trim,V.Local.sWorkSheet)
+'	F.Automation.MSExcel.CreateWorksheet("GuideTree","GuideSheet1",V.Local.sWorkSheet)
+'	'Setting up sheet header
+'	'Retrieve transaction date
+'	V.Local.iIndex.Set(V.Screen.F_Summary!dlstCurr.ListIndex)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",1,1,"Transaction Date:")
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",1,2,V.Screen.F_RateEntry!dtpTransDate.Value)
+'	F.Intrinsic.String.Build("Total Invoice Amount in {0}:",V.Local.sCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",2,1,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",2,2,V.uGlobal.uCurrency(V.Local.iIndex)!AP_TOTAL_EXCH)
+'	F.Intrinsic.String.Build("Total Invoice Amount in {0}:",V.Global.sCoCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",3,1,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",3,2,V.uGlobal.uCurrency(V.Local.iIndex)!AP_TOTAL)
+'	F.Intrinsic.String.Build("Total Gain/Loss in {0}:",V.Local.sCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",4,1,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",4,2,V.uGlobal.uCurrency(V.Local.iIndex)!AP)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",5,1,"Total Gain/Loss in All Currencies:")
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",5,2,V.Global.fAPTotal)
+'	
+'	'Setting up column titles
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,1,"Vendor ID")
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,2,"Vendor Name")
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,3,"Invoice")
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,4,"Due Date")
+'	F.Intrinsic.String.Build("Invoice Amount in {0}:",V.Local.sCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,5,V.Local.sField)
+'	F.Intrinsic.String.Build("Invoice Amount in {0}:",V.Global.sCoCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,6,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,7,"Exch. Date")
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,8,"Exch. Rate")
+'	F.Automation.MSExcel.WriteCell("GuideSheet1",7,9,"Gain/Loss")
+'	
+'	'Copy uAP to uAPGrid and delete entries which do not correspond to the selected currency
+'	F.Intrinsic.Variable.UDTCopy(V.uGlobal.uAP,V.uGlobal.uAPGrid,False)
+'	F.Intrinsic.Variable.UDTFlagAll(V.uGlobal.uAPGrid)
+'	F.Intrinsic.Variable.UDTMultiUnFlag(V.uGlobal.uAPGrid!EXCH_CURR,V.Local.sCurr.Trim)
+'	F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uAPGrid)
+'	
+'	F.Intrinsic.Control.For(V.Local.i1,0,V.uGlobal.uAPGrid.UBound,1)
+'		F.Intrinsic.Math.Add(V.Local.i1,8,V.Local.i2)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,1,V.uGlobal.uAPGrid(V.Local.i1)!VENDOR)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,2,V.uGlobal.uAPGrid(V.Local.i1)!VENDOR_NAME)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,3,V.uGlobal.uAPGrid(V.Local.i1)!INVOICE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,4,V.uGlobal.uAPGrid(V.Local.i1)!DUE_DATE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,5,V.uGlobal.uAPGrid(V.Local.i1)!EXCH_AMT)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,6,V.uGlobal.uAPGrid(V.Local.i1)!AMT)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,7,V.uGlobal.uAPGrid(V.Local.i1)!EXCH_DATE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,8,V.uGlobal.uAPGrid(V.Local.i1)!EXCH_RATE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet1",V.Local.i2,9,V.uGlobal.uAPGrid(V.Local.i1)!GAIN-LOSS)
+'	F.Intrinsic.Control.Next(V.Local.i1)
+'	F.Automation.MSExcel.SaveWorkbook("GuideTree")
+'	F.Automation.MSExcel.DestroyAllObjects("AP","GuideTree","GuideSheet1")
+'	
+'	'Adding a new sheet for AR
+'	F.Automation.MSExcel.CreateAppObject("AR")
+'	F.Automation.MSExcel.OpenWorkbook("AR","GuideTree",V.Local.sFileName)
+'	F.Intrinsic.String.Concat("AR-",V.Local.sCurr.Trim,V.Local.sWorkSheet)
+'	F.Automation.MSExcel.CreateWorksheet("GuideTree","GuideSheet2",V.Local.sWorkSheet)
+'	'Setting up sheet header
+'	'Retrieve transaction date
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",1,1,"Transaction Date:")
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",1,2,V.Screen.F_RateEntry!dtpTransDate.Value)
+'	F.Intrinsic.String.Build("Total Invoice Amount in {0}:",V.Local.sCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",2,1,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",2,2,V.uGlobal.uCurrency(V.Local.iIndex)!AR_TOTAL_EXCH)
+'	F.Intrinsic.String.Build("Total Invoice Amount in {0}:",V.Global.sCoCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",3,1,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",3,2,V.uGlobal.uCurrency(V.Local.iIndex)!AR_TOTAL)
+'	F.Intrinsic.String.Build("Total Gain/Loss in {0}:",V.Local.sCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",4,1,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",4,2,V.uGlobal.uCurrency(V.Local.iIndex)!AR)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",5,1,"Total Gain/Loss in All Currencies:")
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",5,2,V.Global.fARTotal)
+'	
+'	'Setting up column titles
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,1,"Customer ID")
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,2,"Customer Name")
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,3,"Invoice")
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,4,"Due Date")
+'	F.Intrinsic.String.Build("Invoice Amount in {0}:",V.Local.sCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,5,V.Local.sField)
+'	F.Intrinsic.String.Build("Invoice Amount in {0}:",V.Global.sCoCurr.Trim,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,6,V.Local.sField)
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,7,"Exch. Date")
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,8,"Exch. Rate")
+'	F.Automation.MSExcel.WriteCell("GuideSheet2",7,9,"Gain/Loss")
+'	
+'	'Copy uAR to uARGrid and delete entries which do not correspond to the selected currency
+'	F.Intrinsic.Variable.UDTCopy(V.uGlobal.uAR,V.uGlobal.uARGrid,False)
+'	F.Intrinsic.Variable.UDTFlagAll(V.uGlobal.uARGrid)
+'	F.Intrinsic.Variable.UDTMultiUnFlag(V.uGlobal.uARGrid!EXCH_CURR,V.Local.sCurr.Trim)
+'	F.Intrinsic.Variable.UDTDeleteFlagged(V.uGlobal.uARGrid)
+'	
+'	F.Intrinsic.Control.For(V.Local.i1,0,V.uGlobal.uARGrid.UBound,1)
+'		F.Intrinsic.Math.Add(V.Local.i1,8,V.Local.i2)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,1,V.uGlobal.uARGrid(V.Local.i1)!CUSTOMER)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,2,V.uGlobal.uARGrid(V.Local.i1)!CUSTOMER_NAME)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,3,V.uGlobal.uARGrid(V.Local.i1)!INVOICE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,4,V.uGlobal.uARGrid(V.Local.i1)!DUE_DATE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,5,V.uGlobal.uARGrid(V.Local.i1)!EXCH_AMT)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,6,V.uGlobal.uARGrid(V.Local.i1)!AMT)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,7,V.uGlobal.uARGrid(V.Local.i1)!EXCH_DATE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,8,V.uGlobal.uARGrid(V.Local.i1)!EXCH_RATE)
+'		F.Automation.MSExcel.WriteCell("GuideSheet2",V.Local.i2,9,V.uGlobal.uARGrid(V.Local.i1)!GAIN-LOSS)
+'	F.Intrinsic.Control.Next(V.Local.i1)
+'	F.Automation.MSExcel.SaveWorkbook("GuideTree")
+'	F.Automation.MSExcel.DestroyAllObjects("AR","GuideTree","GuideSheet2")
+
+	F.Intrinsic.UI.CloseWaitDialog
+
+	F.Intrinsic.String.Build("Detail of AP/ AR revaluation has been saved to {0}_AR.csv and {0}_AP.csv",V.Local.sFilePath,V.Local.sRet)
+	F.Intrinsic.UI.Msgbox(V.Local.sRet,"Revaluation of AP & AR")
+F.Intrinsic.Control.EndIf
+
+F.Intrinsic.Control.Label("cmdexport_click_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.cmdexport_click.End
+
+Program.Sub.GainLossAP.Start
+F.Intrinsic.Control.SetErrorHandler("GainLossAP_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local.dDateBatch.Declare(Date)
+
+V.Local.fAmt.Declare
+V.Local.fAmt1.Declare
+V.Local.fCheck.Declare
+V.Local.fExchAmt.Declare(Float)
+V.Local.fExchAmtBatch.Declare(Float)
+V.Local.fExchGainLoss.Declare(Float)
+V.Local.fExchRate.Declare
+V.Local.fRateDiff.Declare(Float)
+V.Local.fTotalCurrency.Declare(Float)
+V.Local.fTotalExchInvoice.Declare(Float)
+V.Local.fTotalGL.Declare(Float)
+V.Local.fTotalInvoice.Declare(Float)
+
+V.Local.i1.Declare(Long)
+V.Local.i2.Declare(Long)
+V.Local.i3.Declare(Long)
+V.Local.i4.Declare(Long)
+V.Local.iBatchCode.Declare(Long)
+V.Local.iRow.Declare
+V.Local.iStartRow.Declare(Long)
+
+V.Local.sExchGainLoss.Declare(String)
+V.Local.sFilter.Declare
+V.Local.sInvoice.Declare
+V.Local.sLabel.Declare(String)
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare(String)
+V.Local.sSeek.Declare(String)
+V.Local.sTransDate.Declare(String)
+V.Local.sVendor.Declare
+V.Local.sWaitMsg.Declare(String)
+
+F.Intrinsic.Control.If(V.DataTable.dtAP.Exists,=,True)
+	F.Data.DataTable.Close("dtAP")
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.Create("dtAP",True)
+F.Data.DataTable.AddColumn("dtAP","Vendor","String")
+F.Data.DataTable.AddColumn("dtAP","Name","String")
+F.Data.DataTable.AddColumn("dtAP","Currency","String")
+F.Data.DataTable.AddColumn("dtAP","Invoice","String")
+F.Data.DataTable.AddColumn("dtAP","DueDate","Date")
+F.Data.DataTable.AddColumn("dtAP","Amount","Float")
+F.Data.DataTable.AddColumn("dtAP","ExchAmt","Float")
+F.Data.DataTable.AddColumn("dtAP","ExchDate","Date")
+F.Data.DataTable.AddColumn("dtAP","ExchRate","Float")
+F.Data.DataTable.AddColumn("dtAP","GainLoss","Float")
+
+V.Local.sQuery.Set("SELECT Vendor, Invoice, BATCH_CODE as BatchCode, EXCHANGE_AMT as ExchAmt FROM V_AP_OPEN_ITEMS WHERE BATCH_CODE = '10' OR BATCH_CODE = '11' OR BATCH_CODE = '12' OR BATCH_CODE = '13'")
+F.Intrinsic.String.Concat(V.Local.sQuery," AND EXCHANGE_CURR <> '",V.Global.sCoCurr.Trim,"' AND DATE_INVOICE <= '",V.Global.dPostDate.PervasiveDate,"'",V.Local.sQuery)
+F.Data.DataTable.CreateFromSQL("dtAPData","Conx",V.Local.sQuery)
+
+'F.Data.Dictionary.CreateFromSQL("dicVendor","conx","SELECT Vendor, NAME_VENDOR as Name FROM V_VENDOR_MASTER where vendor <> ''")
+'Function.Data.Dictionary.SetDefaultReturn("dicVendor","")
+'F.Data.DataTable.CreateFromSQL("dtVendor","Conx","SELECT Vendor, NAME_VENDOR as Name FROM V_VENDOR_MASTER where vendor <> ''")
+
+'Get all invoices from AP_OPEN_ITEMS and calculate exchange gain/loss
+V.Local.iStartRow.Set(0)
+V.Global.fAPTotal.Set(0)
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex.RowCount--,1)
+	v.Local.fExchGainLoss.Set(0)
+
+
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iRow)
+	F.Intrinsic.String.Concat("Revaluating Accounts Payable in ",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,V.Local.sWaitMsg)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sWaitMsg,V.Local.iRow,1,V.DataTable.dtForex.RowCount)
+
+	V.Local.fTotalCurrency.Set(0)
+	V.Local.fTotalExchInvoice.Set(0)
+	V.Local.fTotalInvoice.Set(0)
+	'Select distinct vendor from AP_OPEN_ITEMS for the currency
+	F.Intrinsic.String.Build("SELECT DISTINCT(A.VENDOR) AS Vendor, B.NAME_VENDOR as Name FROM V_AP_OPEN_ITEMS A LEFT JOIN V_VENDOR_MASTER B ON A.VENDOR = B.VENDOR WHERE EXCHANGE_CURR = '{0}' AND DATE_INVOICE <= '{1}' AND DATE_INVOICE_DUE <> '1900-01-01' AND BATCH_CODE <> '09' ORDER BY VENDOR",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,V.Global.dPostDate.PervasiveDate,V.Local.sQuery)
+	F.Data.DataTable.CreateFromSQL("dtAPV","Conx",V.Local.sQuery)
+	F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtAPV.RowCount--,1)
+'		'Get vendor name
+'		F.Intrinsic.String.Build("Vendor = '{0}'",V.DataTable.dtAPV(V.Local.i2).Vendor!FieldValTrim,V.Local.sFilter)
+'		F.Data.DataTable.Select("dtVendor",V.Local.sFilter,V.Local.sRet)
+'		V.Local.sVendor.Set(V.DataTable.dtVendor(V.Local.sRet).Name!FieldValTrim)
+		'Select distinct invoice from AP_OPEN_ITEMS based on vendor iteration
+		F.Intrinsic.String.Build("SELECT DISTINCT(INVOICE) AS Invoice FROM V_AP_OPEN_ITEMS WHERE VENDOR='{0}' AND DATE_INVOICE<='{1}' AND DATE_INVOICE_DUE<>'1900-01-01' AND BATCH_CODE<>'09' ORDER BY INVOICE,DATE_BATCH",V.DataTable.dtAPV(V.Local.i2).Vendor!FieldValTrim,V.Global.dPostDate.PervasiveDate,V.Local.sQuery)
+		F.Data.DataTable.CreateFromSQL("dtAPI","Conx",V.Local.sQuery)
+		F.Intrinsic.Control.For(V.Local.i3,0,V.DataTable.dtAPI.RowCount--,1)
+			V.Local.sInvoice.Set(V.DataTable.dtAPI(V.Local.i3).Invoice!FieldValTrim)
+			'Retrieve the first batch date created for this invoice
+			F.Intrinsic.String.Build("SELECT MIN(DATE_BATCH) FROM V_AP_OPEN_ITEMS WHERE VENDOR = '{0}' AND INVOICE = '{1}' AND DATE_INVOICE_DUE <> '1900-01-01' AND BATCH_CODE <> '09'",V.DataTable.dtAPV(V.Local.i2).Vendor!FieldValTrim,V.Local.sInvoice.PSQLFriendly,V.Local.sQuery)
+			F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sQuery,V.Local.dDateBatch)
+			'Retrieve invoice information based on the first batch date
+			F.Intrinsic.String.Build("SELECT DATE_INVOICE_DUE as DueDate, AMT_TRANSACTION as Amt, EXCHANGE_CURR as Curr, DATE_EXCHANGE as ExchDate, EXCHANGE_AMT as ExchAmt FROM V_AP_OPEN_ITEMS WHERE VENDOR = '{0}' AND INVOICE = '{1}' AND DATE_BATCH = '{2}'",V.DataTable.dtAPV(V.Local.i2).Vendor!FieldValTrim,V.Local.sInvoice.PSQLFriendly,V.Local.dDateBatch.PervasiveDate,V.Local.sQuery)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+			F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldValFloat!ExchAmt,=,0)
+				V.Local.fExchRate.Set(0)
+			F.Intrinsic.Control.Else
+'				F.Intrinsic.Math.Div(V.ODBC.conx!rst.FieldValFloat!Amt,V.ODBC.conx!rst.FieldValFloat!ExchAmt,V.Local.fExchRate)
+				F.Intrinsic.Math.Div(V.ODBC.conx!rst.FieldValFloat!ExchAmt,V.ODBC.conx!rst.FieldValFloat!Amt,V.Local.fExchRate)
+				F.Intrinsic.Math.Round(V.Local.fExchRate,5,V.Local.fExchRate)
+			F.Intrinsic.Control.EndIf
+
+			'Get the net invoice amount for every invoice
+			'Looping through every batch code (10, 11, 12, 13, 17)
+			V.Local.fExchAmt.Set(0)
+			F.Intrinsic.Control.For(V.Local.i4,0,3,1)
+				F.Intrinsic.Math.Add(10,V.Local.i4,V.Local.iBatchCode)
+
+				F.Intrinsic.String.Build("Vendor = '{0}' and Invoice = '{1}' and BatchCode = '{2}'",V.DataTable.dtAPV(V.Local.i2).Vendor!FieldValTrim,V.Local.sInvoice.PSQLFriendly,V.Local.iBatchCode,V.Local.sFilter)
+				F.Data.DataTable.Select("dtAPData",V.Local.sFilter,V.Local.sRet)
+				'If data are found, calculate the invoice sum of the corresponding batch code
+				V.Local.fExchAmtBatch.Set(0)
+				F.Intrinsic.Control.If(V.Local.sRet.Trim,<>,"***NORETURN***")
+					F.Data.DataTable.Compute("dtAPData","SUM(ExchAmt)",V.Local.sFilter,V.Local.fExchAmtBatch)
+				F.Intrinsic.Control.EndIf
+
+				F.Intrinsic.Control.If(V.Local.i4,=,0)
+					F.Intrinsic.Math.Add(V.Local.fExchAmt,V.Local.fExchAmtBatch,V.Local.fExchAmt)
+				F.Intrinsic.Control.ElseIf(V.Local.i4,=,3)
+					F.Intrinsic.Math.Add(V.Local.fExchAmt,V.Local.fExchAmtBatch,V.Local.fExchAmt)
+				F.Intrinsic.Control.Else
+					F.Intrinsic.Math.Sub(V.Local.fExchAmt,V.Local.fExchAmtBatch,V.Local.fExchAmt)
+				F.Intrinsic.Control.EndIf
+			F.Intrinsic.Control.Next(V.Local.i4)
+
+			F.Intrinsic.Control.If(V.Local.fExchRate,=,0)
+				V.Local.fExchAmt.Set(0)
+			F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Math.Abs(V.Local.fExchAmt,V.Local.fCheck)
+			F.Intrinsic.Control.If(V.Local.fCheck,>,0.009)
+				'Round up the nett exchange amount to 2 decimal places
+				F.Intrinsic.Math.Round(V.Local.fExchAmt,2,V.Local.fExchAmt)
+				'Get the nett amount in base currency
+				F.Intrinsic.Math.Div(V.Local.fExchAmt,V.Local.fExchRate,V.Local.fAmt)
+				F.Intrinsic.Math.Div(V.Local.fExchAmt,V.DataTable.dtForex(V.Local.i1).RateFrom!FieldValFloat,V.Local.fAmt1)
+'				F.Intrinsic.Math.Mult(V.Local.fExchAmt,V.Local.fExchRate,V.Local.fAmt)
+				F.Intrinsic.Math.Round(V.Local.fAmt,2,V.Local.fAmt)
+				F.Intrinsic.Math.Round(V.Local.fAmt1,2,V.Local.fAmt1)				
+				'Get the gain/loss amount by multiplying the nett exchange amount with the exchange rate difference
+'				F.Intrinsic.Math.Sub(V.DataTable.dtForex(V.Local.i1).RateFrom!FieldValFloat,V.Local.fExchRate,V.Local.fRateDiff)
+'				F.Intrinsic.Math.Mult(V.Local.fExchAmt,V.Local.fRateDiff,V.Local.fExchGainLoss)
+				F.Intrinsic.Math.Sub(V.Local.fAmt,V.Local.fAmt1,V.Local.fExchGainLoss)
+				F.Intrinsic.Math.Round(V.Local.fExchGainLoss,2,V.Local.fExchGainLoss)
+				F.Data.DataTable.AddRow("dtAP","Vendor",V.DataTable.dtAPV(V.Local.i2).Vendor!FieldValTrim,"Name",V.DataTable.dtAPV(V.Local.i2).Name!FieldValTrim,"Currency",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,"Invoice",V.Local.sInvoice.PSQLFriendly,"DueDate",V.ODBC.conx!rst.FieldVal!DueDate,"Amount",V.Local.fAmt,"ExchAmt",V.Local.fExchAmt,"ExchDate",V.ODBC.conx!rst.FieldVal!ExchDate,"ExchRate",V.Local.fExchRate,"GainLoss",V.Local.fExchGainLoss)
+				F.Intrinsic.Math.Add(V.Global.fAPTotal,V.Local.fExchGainLoss,V.Global.fAPTotal)
+				F.Intrinsic.Math.Add(V.Local.fTotalCurrency,V.Local.fExchGainLoss,V.Local.fTotalCurrency)
+				F.Intrinsic.Math.Add(V.Local.fTotalExchInvoice,V.Local.fExchAmt,V.Local.fTotalExchInvoice)
+				F.Intrinsic.Math.Add(V.Local.fTotalInvoice,V.Local.fAmt,V.Local.fTotalInvoice)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rst.Close
+		F.Intrinsic.Control.Next(V.Local.i3)
+		F.Data.DataTable.Close("dtAPI")
+	F.Intrinsic.Control.Next(V.Local.i2)
+	F.Data.DataTable.Close("dtAPV")
+
+	F.Data.DataTable.SetValue("dtForex",V.Local.i1,"AP",V.Local.fTotalCurrency)
+	F.Data.DataTable.SetValue("dtForexDetail",V.Local.i1,"APTotal",V.Local.fTotalInvoice,"APTotalExch",V.Local.fTotalExchInvoice)
+
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'F.Data.DataTable.FillFromDictionary("dtAP","dicVendor","Vendor","Name")
+'F.Intrinsic.Debug.ShowCallerInfo
+Gui.F_Summary.GsGCAP.AddGridviewFromDatatable("gvAP","dtAP")
+Gui.F_Summary.GsGCAP.MainView("gvAP")
+Gui.F_Summary.GsGCAP.SetGridviewProperty("gvAP","OptionsViewShowGroupPanel",True)
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Vendor","Visible",False)
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Name","Caption","Vendor Name")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","DueDate","Caption","Due Date")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchAmt","Caption","Forex Amount")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchDate","Caption","Exch. Date")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchRate","Caption","Exch. Rate")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","GainLoss","Caption","Gain/(Loss)")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Vendor","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Name","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Currency","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Invoice","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","DueDate","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Amount","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchAmt","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchDate","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchRate","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","GainLoss","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Vendor","CellHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Currency","CellHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Invoice","CellHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","DueDate","CellHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchDate","CellHAlignment","Center")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Vendor","MinWidth","70")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Name","MinWidth","140")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Currency","MinWidth","60")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Invoice","MinWidth","100")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","DueDate","MinWidth","90")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Amount","MinWidth","120")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchAmt","MinWidth","120")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchDate","MinWidth","90")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchRate","MinWidth","90")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","GainLoss","MinWidth","90")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","DueDate","DisplayCustomDatetime","d")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchDate","DisplayCustomDatetime","d")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","Amount","DisplayCustomNumeric","##,###,##0.00")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchAmt","DisplayCustomNumeric","##,###,##0.00")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","ExchRate","DisplayCustomNumeric","##,###,##0.00000")
+Gui.F_Summary.GsGCAP.SetColumnProperty("gvAP","GainLoss","DisplayCustomNumeric","##,###,##0.00")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtAP.RowCount--,2)
+	Gui.F_Summary.GsGCAP.SetRowAppearance("gvAP",V.Local.i1,"backcolor","aliceblue")
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'F.Data.DataTable.Close("dtVendor")
+'F.Data.Dictionary.Close("dicVendor")
+F.Data.DataTable.Close("dtAPData")
+
+F.Intrinsic.Control.Label("GainLossAP_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GainLossAP.End
+
+Program.Sub.GainLossAR.Start
+F.Intrinsic.Control.SetErrorHandler("GainLossAR_Err")
+F.Intrinsic.Control.ClearErrors
+V.Local.sError.Declare(String)
+
+V.Local.dDateBatch.Declare(Date)
+
+V.Local.fAmt.Declare
+V.Local.fCheck.Declare
+V.Local.fExchAmt.Declare(Float)
+V.Local.fExchAmtBatch.Declare(Float)
+V.Local.fExchGainLoss.Declare(Float)
+V.Local.fExchRate.Declare
+V.Local.fRateDiff.Declare(Float)
+V.Local.fTotalCurrency.Declare(Float)
+V.Local.fTotalExchInvoice.Declare(Float)
+V.Local.fTotalGL.Declare(Float)
+V.Local.fTotalInvoice.Declare(Float)
+
+V.Local.i1.Declare(Long)
+V.Local.i2.Declare
+V.Local.i3.Declare
+V.Local.iRow.Declare
+V.Local.iStartRow.Declare(Long)
+
+V.Local.sCustomer.Declare
+V.Local.sExchGainLoss.Declare(String)
+V.Local.sFilter.Declare
+V.Local.sInvoice.Declare
+V.Local.sQuery.Declare(String)
+V.Local.sRet.Declare
+V.Local.sTransDate.Declare(String)
+V.Local.sWaitMsg.Declare(String)
+
+'F.Intrinsic.String.Format(V.Global.dTransDate,"YYYY-MM-DD",V.Local.sTransDate)
+
+F.Intrinsic.Control.If(V.DataTable.dtAR.Exists,=,True)
+	F.Data.DataTable.Close("dtAR")
+F.Intrinsic.Control.EndIf
+
+F.Data.DataTable.Create("dtAR",True)
+F.Data.DataTable.AddColumn("dtAR","Customer","String")
+F.Data.DataTable.AddColumn("dtAR","Name","String")
+F.Data.DataTable.AddColumn("dtAR","Currency","String")
+F.Data.DataTable.AddColumn("dtAR","Invoice","String")
+F.Data.DataTable.AddColumn("dtAR","DueDate","Date")
+F.Data.DataTable.AddColumn("dtAR","Amount","Float")
+F.Data.DataTable.AddColumn("dtAR","ExchAmt","Float")
+F.Data.DataTable.AddColumn("dtAR","ExchDate","Date")
+F.Data.DataTable.AddColumn("dtAR","ExchRate","Float")
+F.Data.DataTable.AddColumn("dtAR","GainLoss","Float")
+F.Data.DataTable.AddColumn("dtAR","GL","String")
+'F.Data.Dictionary.CreateFromSQL("dicCustomer","conx","SELECT Customer, NAME_CUSTOMER as Name FROM V_CUSTOMER_MASTER")
+'F.Data.DataTable.CreateFromSQL("dtCustomer","Conx","SELECT Customer, NAME_CUSTOMER as Name FROM V_CUSTOMER_MASTER")
+
+'Get all invoices from AP_OPEN_ITEMS and calculate exchange gain/loss
+V.Local.iStartRow.Set(0)
+V.Global.fARTotal.Set(0)
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtForex.RowCount--,1)
+	F.Intrinsic.Math.Add(V.Local.i1,1,V.Local.iRow)
+	F.Intrinsic.String.Concat("Revaluating Accounts Receivable in ",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,V.Local.sWaitMsg)
+	F.Intrinsic.UI.ChangeWaitStatus(V.Local.sWaitMsg,V.Local.iRow,1,V.DataTable.dtForex.RowCount)
+
+	V.Local.fTotalCurrency.Set(0)
+	V.Local.fTotalExchInvoice.Set(0)
+	V.Local.fTotalInvoice.Set(0)
+
+	'Select distinct vendor from AR_OPEN_ITEMS for the currency
+	F.Intrinsic.String.Build("SELECT DISTINCT(A.CUSTOMER) AS Customer, B.NAME_CUSTOMER as Name FROM V_AR_OPEN_ITEMS A LEFT JOIN V_CUSTOMER_MASTER B ON A.CUSTOMER = B.CUSTOMER WHERE EXCHANGE_CURR = '{0}' AND DATE_INVOICE <= '{1}' AND DUE_DATE <> '1900-01-01' ORDER BY CUSTOMER",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,V.Global.dPostDate.PervasiveDate,V.Local.sQuery)
+'	F.Intrinsic.Debug.ShowCallerInfo
+	F.Data.DataTable.CreateFromSQL("dtARC","Conx",V.Local.sQuery)
+	F.Intrinsic.Control.For(V.Local.i2,0,V.DataTable.dtARC.RowCount--,1)
+'		'Get customer name
+'		F.Intrinsic.String.Build("Customer = '{0}'",V.DataTable.dtARC(V.Local.i2).Customer!FieldValTrim,V.Local.sFilter)
+'		F.Data.DataTable.Select("dtCustomer",V.Local.sFilter,V.Local.sRet)
+'		V.Local.sCustomer.Set(V.DataTable.dtCustomer(V.Local.sRet).Name!FieldValTrim)
+
+		'Select distinct invoice from AR_OPEN_ITEMS based on customer iteration
+		F.Intrinsic.String.Build("SELECT DISTINCT(INVOICE) AS Invoice FROM V_AR_OPEN_ITEMS WHERE CUSTOMER='{0}' AND DATE_INVOICE<='{1}' AND DUE_DATE<>'1900-01-01' ORDER BY INVOICE,DATE_TRANSACTION",V.DataTable.dtARC(V.Local.i2).Customer!FieldValTrim,V.Global.dPostDate.PervasiveDate,V.Local.sQuery)
+'		F.Intrinsic.Debug.ShowCallerInfo
+		F.Data.DataTable.CreateFromSQL("dtARI","Conx",V.Local.sQuery)
+		F.Intrinsic.Control.For(V.Local.i3,0,V.DataTable.dtARI.RowCount--,1)
+			V.Local.sInvoice.Set(V.DataTable.dtARI(V.Local.i3).Invoice!FieldValTrim)
+			'Retrieve the first batch date created for this invoice
+			F.Intrinsic.String.Build("SELECT MIN(DATE_TRANSACTION) FROM V_AR_OPEN_ITEMS WHERE CUSTOMER = '{0}' AND INVOICE = '{1}' AND DUE_DATE <> '1900-01-01'",V.DataTable.dtARC(V.Local.i2).Customer!FieldValTrim,V.Local.sInvoice.PSQLFriendly,V.Local.sQuery)
+			F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sQuery,V.Local.dDateBatch)
+			'Retrieve invoice information based on the first batch date
+			F.Intrinsic.String.Build("SELECT GL_ACCOUNT as GL, AMT_INVOICE as Amt, EXCHANGE_CURR as Currency, DATE_EXCHANGE as ExchDate, EXCHANGE_RATE as ExchRate, EXCHANGE_AMT as ExchAmt, DUE_DATE as DueDate FROM V_AR_OPEN_ITEMS WHERE CUSTOMER = '{0}' AND INVOICE = '{1}' AND DATE_TRANSACTION = '{2}'",V.DataTable.dtARC(V.Local.i2).Customer!FieldValTrim,V.Local.sInvoice.PSQLFriendly,V.Local.dDateBatch.PervasiveDate,V.Local.sQuery)
+			F.ODBC.Connection!conx.OpenLocalRecordsetRO("rst",V.Local.sQuery)
+			F.Intrinsic.Control.If(V.ODBC.conx!rst.FieldValFloat!ExchAmt,=,0)
+				V.Local.fExchRate.Set(0)
+			F.Intrinsic.Control.Else
+				F.Intrinsic.Math.Div(V.ODBC.conx!rst.FieldValFloat!Amt,V.ODBC.conx!rst.FieldValFloat!ExchAmt,V.Local.fExchRate)
+				F.Intrinsic.Math.Round(V.Local.fExchRate,5,V.Local.fExchRate)
+			F.Intrinsic.Control.EndIf
+
+			'Get the net invoice amount for every invoice
+			F.Intrinsic.String.Build("SELECT SUM(EXCHANGE_AMT) FROM AR_OPEN_ITEMS WHERE CUSTOMER = '{0}' AND INVOICE = '{1}'",V.DataTable.dtARC(V.Local.i2).Customer!FieldValTrim,V.Local.sInvoice.PSQLFriendly,V.Local.sQuery)
+			F.ODBC.Connection!conx.ExecuteAndReturn(V.Local.sQuery,V.Local.fExchAmt)	
+			F.Intrinsic.Control.If(V.Local.fExchRate,=,0)
+				V.Local.fExchAmt.Set(0)
+			F.Intrinsic.Control.EndIf
+
+			F.Intrinsic.Math.Abs(V.Local.fExchAmt,V.Local.fCheck)
+			F.Intrinsic.Control.If(V.Local.fCheck,>,0.009)
+				'Round up the nett exchange amount to 2 decimal places
+				F.Intrinsic.Math.Round(V.Local.fExchAmt,2,V.Local.fExchAmt)
+				'Get the nett amount in base currency
+				F.Intrinsic.Math.Mult(V.Local.fExchAmt,V.Local.fExchRate,V.Local.fAmt)
+				F.Intrinsic.Math.Round(V.Local.fAmt,2,V.Local.fAmt)
+				'Get the gain/loss amount by multiplying the nett exchange amount with the exchange rate difference
+				F.Intrinsic.Math.Sub(V.DataTable.dtForex(V.Local.i1).RateTo!FieldValFloat,V.Local.fExchRate,V.Local.fRateDiff)
+				F.Intrinsic.Math.Mult(V.Local.fExchAmt,V.Local.fRateDiff,V.Local.fExchGainLoss)
+				F.Intrinsic.Math.Round(V.Local.fExchGainLoss,2,V.Local.fExchGainLoss)
+				F.Data.DataTable.AddRow("dtAR","Customer",V.DataTable.dtARC(V.Local.i2).Customer!FieldValTrim,"Name",V.DataTable.dtARC(V.Local.i2).Name!FieldValTrim,"Currency",V.DataTable.dtForex(V.Local.i1).Currency!FieldValTrim,"Invoice",V.Local.sInvoice.PSQLFriendly,"DueDate",V.ODBC.conx!rst.FieldVal!DueDate,"Amount",V.Local.fAmt,"ExchAmt",V.Local.fExchAmt,"ExchDate",V.ODBC.conx!rst.FieldVal!ExchDate,"ExchRate",V.Local.fExchRate,"GainLoss",V.Local.fExchGainLoss,"GL",V.ODBC.conx!rst.FieldValTrim!GL)
+				F.Intrinsic.Math.Add(V.Global.fARTotal,V.Local.fExchGainLoss,V.Global.fARTotal)
+				F.Intrinsic.Math.Add(V.Local.fTotalCurrency,V.Local.fExchGainLoss,V.Local.fTotalCurrency)
+				F.Intrinsic.Math.Add(V.Local.fTotalExchInvoice,V.Local.fExchAmt,V.Local.fTotalExchInvoice)
+				F.Intrinsic.Math.Add(V.Local.fTotalInvoice,V.Local.fAmt,V.Local.fTotalInvoice)
+			F.Intrinsic.Control.EndIf
+			F.ODBC.conx!rst.Close
+		F.Intrinsic.Control.Next(V.Local.i3)
+		F.Data.DataTable.Close("dtARI")
+	F.Intrinsic.Control.Next(V.Local.i2)
+	F.Data.DataTable.Close("dtARC")
+	F.Data.DataTable.SetValue("dtForex",V.Local.i1,"AR",V.Local.fTotalCurrency)
+	F.Data.DataTable.SetValue("dtForexDetail",V.Local.i1,"ARTotal",V.Local.fTotalInvoice,"ARTotalExch",V.Local.fTotalExchInvoice)
+F.Intrinsic.Control.Next(V.Local.i1)
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+'F.Data.DataTable.FillFromDictionary("dtAR","dicCustomer","Customer","Name")
+
+Gui.F_Summary.GsGCAR.AddGridviewFromDatatable("gvAR","dtAR")
+Gui.F_Summary.GsGCAR.MainView("gvAR")
+Gui.F_Summary.GsGCAR.SetGridviewProperty("gvAR","OptionsViewShowGroupPanel",True)
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Customer","Visible",False)
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","GL","Visible",False)
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Name","Caption","Customer Name")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","DueDate","Caption","Due Date")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchAmt","Caption","Forex Amount")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchDate","Caption","Exch. Date")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchRate","Caption","Exch. Rate")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","GainLoss","Caption","Gain/(Loss)")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Customer","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Name","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Currency","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Invoice","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","DueDate","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Amount","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchAmt","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchDate","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchRate","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","GainLoss","HeaderHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Customer","CellHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Currency","CellHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Invoice","CellHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","DueDate","CellHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchDate","CellHAlignment","Center")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Customer","MinWidth","70")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Name","MinWidth","140")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Currency","MinWidth","60")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Invoice","MinWidth","100")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","DueDate","MinWidth","90")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Amount","MinWidth","120")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchAmt","MinWidth","120")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchDate","MinWidth","90")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchRate","MinWidth","90")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","GainLoss","MinWidth","90")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","DueDate","DisplayCustomDatetime","d")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchDate","DisplayCustomDatetime","d")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","Amount","DisplayCustomNumeric","##,###,##0.00")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchAmt","DisplayCustomNumeric","##,###,##0.00")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","ExchRate","DisplayCustomNumeric","##,###,##0.00000")
+Gui.F_Summary.GsGCAR.SetColumnProperty("gvAR","GainLoss","DisplayCustomNumeric","##,###,##0.00")
+
+F.Intrinsic.Control.For(V.Local.i1,0,V.DataTable.dtAR.RowCount--,2)
+	Gui.F_Summary.GsGCAR.SetRowAppearance("gvAR",V.Local.i1,"backcolor","aliceblue")
+F.Intrinsic.Control.Next(V.Local.i1)
+
+'F.Data.Dictionary.Close("dicCustomer")
+'F.Data.DataTable.Close("dtCustomer")
+
+F.Intrinsic.Control.Label("GainLossAR_Err")
+F.Intrinsic.Control.If(V.Ambient.ErrorNumber,<>,0)
+	Function.Intrinsic.String.Concat("Project: GAB_4667_AP_AR_REVALUATION.g2u",V.Ambient.Newline,V.Ambient.Newline,"Subroutine: ",V.Ambient.CurrentSubroutine,V.Ambient.NewLine,"Error Occurred ",V.Ambient.ErrorNumber," with description ",V.Ambient.ErrorDescription,V.Local.sError)
+	F.Intrinsic.UI.Msgbox(V.Local.sError)
+Function.Intrinsic.Control.EndIf
+
+Program.Sub.GainLossAR.End
+'Program.Sub.lbl1_Click.Start
+'Function.Intrinsic.Debug.InvokeDebugger
+'Function.Intrinsic.Debug.Stop
+
+'Program.Sub.lbl1_Click.End
+
+Program.Sub.Comments.Start
+${$0$}$AP/ AR Revaluation$}$MHERTANTO$}$10/7/2017 2:40:38 PM$}$False
+${$3$}$0$}$$}$0$}$-1$}$$}$12:00:00 AM$}$This program calculates unrealized gain/loss from AP and AR of open invoices in foreign currencies.
+${$5$}$2.0.0.0$}$2
+${$6$}$dyunus$}$20201218090825838$}$xZ6SHi8g7O0Qsxe6AiO2NH3PnOKQRy0TSiMhqoNrANOCN4UCEjPJxBTAW711Ab16VMr/Vx0n1bk=
+Program.Sub.Comments.End
